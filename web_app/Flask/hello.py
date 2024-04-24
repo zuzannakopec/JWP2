@@ -18,5 +18,9 @@ def hello_name(name):
 def show_blog(postID):
    return 'Blog Number %d' % postID
 
+@app.route('/rev/<float:revNo>')
+def revision(revNo):
+    return 'Revision Number %f' %revNo
+
 if __name__ == '__main__':
    app.run(debug=True)
